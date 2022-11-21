@@ -112,9 +112,6 @@ ulFiltros.addEventListener('click', (event) => {
                 }
                 break;
             default:
-                console.log('agrego un cambio');
-
-
 
         }
 
