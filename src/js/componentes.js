@@ -2,11 +2,11 @@ import { Todo } from '../classes'
 
 import { todoList } from '../index'
 // Referencias en el HTML
-const divTodoList   = document.querySelector('.todo-list');
-const txtInput      = document.querySelector('.new-todo');
-const btnBorrar     = document.querySelector('.clear-completed');
-const ulFiltros     = document.querySelector('.filters');
-const anchorFiltros = document.querySelectorAll('.filtro'); 
+const divTodoList = document.querySelector('.todo-list');
+const txtInput = document.querySelector('.new-todo');
+const btnBorrar = document.querySelector('.clear-completed');
+const ulFiltros = document.querySelector('.filters');
+const anchorFiltros = document.querySelectorAll('.filtro');
 
 export const crearTodoHtml = (todo) => {
 
@@ -91,7 +91,7 @@ ulFiltros.addEventListener('click', (event) => {
     if (!filtro) { return; }
 
     anchorFiltros.forEach(elem => elem.classList.remove('selected'));
-    console.log(event.target); 
+    console.log(event.target);
 
     for (const elemento of divTodoList.children) {
 
@@ -111,7 +111,8 @@ ulFiltros.addEventListener('click', (event) => {
                     elemento.classList.add('hidden');
                 }
                 break;
-
+            default:
+                console.log('agrego un cambio');
 
 
 
